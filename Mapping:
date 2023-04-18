@@ -1,0 +1,48 @@
+Step1:
+Private clinic (Clinic_ID, PhoneNumber, City, ZipCode)
+Employee (ID, FName, LName, PhoneNumber, B_date, gender, address,
+Salary, Jop_Type)
+Department (D_No, D_Name)
+Client (C_ID, Address, Name, gender, Contact_No, Appointment number, 
+Appointment time)
+Room ( room_ID, room_type )
+Step2:
+No weak entity 
+Step3:
+No 1 To 1 relationship
+Step4:
+There is a 1 To N relationship
+Department (D_No, D_Name, Clinic_ID)
+Department (D_No, D_Name,room_ID)
+Employee (ID, FName, LName, PhoneNumber, B_date, gender, address,
+Salary, Jop_Type, D_No)
+Step5:
+No M to N relationship
+Step6:
+No multivalued attributes
+Step7:
+No ternary relationship
+Step8A:
+Dentists(ID, Degree)
+Dietitians (ID, Type of specialist)
+Dermatologist (ID, Experience)
+Nurses(ID, Long time work)
+ Receptionist (ID, Typing_speed)
+Manger (ID)
+Step2:
+No weak entity 
+Step3:
+There is 1 To 1 relationship 
+Department (D_No, D_Name, mngrID)
+Step4:
+There is 1 To N relationship 
+Client (C_ID, Address, Name, gender, Contact_No, Appointment number, 
+Appointment time, ID)
+Step5:
+No M to N relationship
+Step6:
+No multivalued attributes
+Step7:
+No ternary relationship
+Step9:
+There is no union type
