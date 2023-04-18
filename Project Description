@@ -1,0 +1,20 @@
+We will create a database for a private clinic that has (Clinic ID, 
+phone number, address, city, Zip code). The clinic consists of 
+four departments every department have (Department_no, 
+Department name) Each department is managed by one 
+employee. 
+Also The departments are consists of several rooms. each room 
+has (room_id, room_type)
+And there are several employees. Do a particular jobs. And 
+all employees work in departments based on their type of job
+Each employee has (ID, First Name, Last Name, gender, Birth of 
+date, phone number, address, salary, job type) 
+We can divide the employees based on their jobs as follows: 
+dentists, which Their degree has to be determined. dietitians,
+and will determine the type of specialist
+Dermatologists, and they have Experience in the field of 
+dermatology.Nurses, and they have Ability to work for long 
+time, and receptioniststhey have typing speed.
+Every client who visits the clinic has (Clinet_no, name, gender, 
+address, contact_no, Appointment number, Appointment 
+time) and every client is served by the reception staff. 
