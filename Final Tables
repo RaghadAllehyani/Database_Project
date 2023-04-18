@@ -1,0 +1,102 @@
+Step1:
+Private clinic (Clinic_ID, PhoneNumber, City, ZipCode)
+Employee (ID, FName, LName, PhoneNumber, B_date, gender, address,
+Salary, Jop_Type, D_No)
+Department (D_No, D_Name, mngrID)
+Client (C_ID, Address, Name, gender, Contact_No, Appointment number, 
+Appointment time, ID)
+Room (room_ID, room_type)
+Step8a:
+Dentists(ID, Degree)
+Dietitians (ID, Type of specialist)
+Dermatologist (ID, Experience)
+Nurses(ID, Long time work)
+Receptionist (ID, Typing_speed) 
+Manger (ID)
+
+Normalization:
+1NF:
+Private clinic (Clinic_ID#, PhoneNumber, City, ZipCode) this table is in 
+the 1NF Because it fulfills all the conditions
+Employee (ID#, FName, LName, PhoneNumber, B_date, gender, address, 
+Salary, Jop_Type, D_No) this table is in the 1NF Because it fulfills all the 
+conditions
+Department (D_No#, D_Name, mngrID) this table is in the 1NF Because 
+it fulfills all the conditions
+Room (room_ID#, room_type)this table is in the 1NF Because it fulfills 
+all the conditions
+Manger(ID#): This table contains repeating values in the department 
+table. So it is not in 1NF.Then we will delete it.
+Client (C_ID#, Address, Name, gender, Contact_No, (Appointment 
+number, Appointment time#, ID)): In this table there will be repeating 
+groups because the client may visit the clinic more than once, and every 
+time he may have a different appointment number and a different 
+appointment time and will be served by a different receptionist
+We will create the following tables:
+Client (C_ID#, Address, Name, gender, Contact_No)
+Appointment: (C_ID#, Appointment time#,Appointment number, ID)
+According to the system, if the time is 10 a.m., for example, the 
+appointment number will always be 3 and the receptionist will be the 
+owner of the number 130 because it will be the time of his shift, so 
+ Appointment number and ID They fully depend on Appointment time
+so it is in 2NF
+Dentists(ID#, Degree) this table is in the 1NF Because it fulfills all the 
+conditions
+Dietitians (ID#, Type of specialist)this table is in the 1NF Because it 
+fulfills all the conditions
+Dermatologist (ID#, Experience)this table is in the 1NF Because it fulfills 
+all the conditions
+Nurses(ID#, Long time work)this table is in the 1NF Because it fulfills all 
+the conditions
+Receptionist (ID#, Typing_speed) this table is in the 1NF Because it 
+fulfills all the conditions
+2NF:
+Private clinic (Clinic_ID#, PhoneNumber, City, ZipCode) the relation is in 
+1NF, all non-key attributes are fully functionally dependent on the entire 
+key
+Employee (ID#, FName, LName, PhoneNumber, B_date, gender, address, 
+Salary, Jop_Type, D_No) the relation is in 1NF, all non-key attributes are 
+fully functionally dependent on the entire key
+Department (D_No#, D_Name, mngrID)the relation is in 1NF, all nonkey attributes are fully functionally dependent on the entire key
+Room (room_ID#, room_type) the relation is in 1NF, all non-key 
+attributes are fully functionally dependent on the entire key
+Client (C_ID#, Address, Name, gender, Contact_No)the relation is in 
+1NF, all non-key attributes are fully functionally dependent on the entire 
+key
+Appointment: (C_ID#, Appointment time#,Appointment number, ID) 
+the relation is in 1NF, all non-key attributes are fully functionally 
+dependent on the entire key
+Dentists(ID#, Degree) the relation is in 1NF, all non-key attributes are 
+fully functionally dependent on the entire key
+Dietitians (ID#, Type of specialist)the relation is in 1NF, all non-key 
+attributes are fully functionally dependent on the entire key
+Dermatologist (ID#, Experience)the relation is in 1NF, all non-key 
+attributes are fully functionally dependent on the entire key
+Nurses(ID#, Long time work)the relation is in 1NF, all non-key attributes 
+are fully functionally dependent on the entire key
+Receptionist (ID#, Typing_speed)the relation is in 1NF, all non-key 
+attributes are fully functionally dependent on the entire key
+3NF & BCNF Relations and final tables:
+Private clinic (Clinic_ID#, PhoneNumber, City, ZipCode) the relation is in 
+2NF, all transitive dependencies have been removed
+Employee (ID#, FName, LName, PhoneNumber, B_date, gender, address, 
+Salary, Jop_Type, D_No) the relation is in 2NF, all transitive 
+dependencies have been removed
+Department (D_No#, D_Name, mngrID) the relation is in 2NF, all 
+transitive dependencies have been removed
+Room (room_ID#, room_type)the relation is in 2NF, all transitive 
+dependencies have been removed
+Client (C_ID#, Address, Name, gender, Contact_No)the relation is in 
+2NF, all transitive dependencies have been removed
+Appointment: (C_ID#, Appointment time#,Appointment number, ID) 
+the relation is in 2NF, all transitive dependencies have been removed
+Dentists(ID#, Degree)the relation is in 2NF, all transitive dependencies 
+have been removed
+Dietitians (ID#, Type of specialist)the relation is in 2NF, all transitive 
+dependencies have been removed
+Dermatologist (ID#, Experience)the relation is in 2NF, all transitive 
+dependencies have been removed
+Nurses(ID#, Long time work)the relation is in 2NF, all transitive 
+dependencies have been removed
+Receptionist (ID#, Typing_speed)the relation is in 2NF, all transitive 
+dependencies have been removed
